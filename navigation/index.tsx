@@ -10,7 +10,18 @@ const Stack = createNativeStackNavigator();
 export default function Navigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#00ad0c',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      >
         <Stack.Screen
           name="Home"
           component={HomeScreen}
@@ -19,7 +30,7 @@ export default function Navigation() {
         <Stack.Screen
           name="ShoppingCart"
           component={ShoppingCartScreen}
-          options={{ title: 'Carrinho de Compras' }}
+          options={{ title: 'Carrinho de compras' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
