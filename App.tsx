@@ -1,10 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+
+interface IProduct {
+  id: string;
+  title: string;
+  price: number;
+  thumbnail: string;
+}
 
 export default function App() {
   const [isLoading, setLoading] = useState(true);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
 
   const getProducts = async () => {
     try {
@@ -27,7 +41,22 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {isLoading ? <ActivityIndicator /> : <Text>Online Store</Text>}
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
+        <FlatList
+          data={products}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }) => (
+            <View>
+              <Text>
+                {item.title}, {item.price}
+              </Text>
+              <Image style={styles.logo} source={{ uri: item.thumbnail }} />
+            </View>
+          )}
+        />
+      )}
       <StatusBar style="auto" />
     </View>
   );
@@ -39,5 +68,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logo: {
+    height: 58,
+    width: 66,
   },
 });
