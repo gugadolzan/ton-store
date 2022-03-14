@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
@@ -57,7 +56,6 @@ export default function Component() {
           )}
         />
       )}
-      <StatusBar style="auto" />
     </View>
   );
 }
