@@ -47,7 +47,7 @@ export default function Component() {
           data={products}
           keyExtractor={({ id }) => id}
           renderItem={({ item }) => (
-            <View>
+            <View style={styles.product}>
               <Text>
                 {item.title}, {item.price}
               </Text>
@@ -62,13 +62,18 @@ export default function Component() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
+    backgroundColor: '#fff',
+    flex: 1,
     justifyContent: 'center',
   },
   logo: {
-    height: 58,
-    width: 66,
+    height: 100,
+    width: 100,
+  },
+  product: {
+    borderBottomColor: '#eee',
+    borderBottomWidth: 1,
+    margin: 10,
   },
 });
