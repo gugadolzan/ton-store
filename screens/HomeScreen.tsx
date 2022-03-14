@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
+  Button,
   FlatList,
   Image,
   StyleSheet,
@@ -15,7 +16,7 @@ interface IProduct {
   thumbnail: string;
 }
 
-export default function Component() {
+export default function HomeScreen({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [products, setProducts] = useState<IProduct[]>([]);
 
@@ -40,6 +41,7 @@ export default function Component() {
 
   return (
     <View style={styles.container}>
+      <Button title="Carrinho de compras" onPress={() => navigation.navigate('ShoppingCart')} />
       {isLoading ? (
         <ActivityIndicator />
       ) : (
