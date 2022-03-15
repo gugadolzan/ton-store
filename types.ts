@@ -10,3 +10,8 @@ export interface IProductsListProps {
   shoppingCart: IProduct[];
   setShoppingCart: (shoppingCart: IProduct[]) => void;
 }
+
+export interface IShoppingCartContext {
+  shoppingCart: IProduct[];
+  setShoppingCart?: (products: IProduct[]) => void;
+}
