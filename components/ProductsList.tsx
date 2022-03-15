@@ -1,10 +1,24 @@
 import React from 'react';
-import { FlatList, Image, Text, View } from 'react-native';
+import { Button, FlatList, Image, Text, View } from 'react-native';
 
 import styles from '../styles';
-import { IProduct } from '../types';
+import { IProduct, IProductsListProps } from '../types';
 
-export default function ProductsList({ products }: { products: IProduct[] }) {
+export default function ProductsList({
+  products,
+  shoppingCart,
+  setShoppingCart,
+}: IProductsListProps) {
+  const addToCart = (product: IProduct) => {
+    setShoppingCart([...shoppingCart, product]);
+  };
+
+  const removeFromCart = (product: IProduct) => {
+    setShoppingCart(
+      shoppingCart.filter((item: IProduct) => item.id !== product.id)
+    );
+  };
+
   return (
     <FlatList
       data={products}
@@ -15,6 +29,17 @@ export default function ProductsList({ products }: { products: IProduct[] }) {
             {item.title}, {item.price}
           </Text>
           <Image style={styles.logo} source={{ uri: item.thumbnail }} />
+          {shoppingCart.find((p) => p.id === item.id) ? (
+            <Button
+              title="Remover do carrinho"
+              onPress={() => removeFromCart(item)}
+            />
+          ) : (
+            <Button
+              title="Adicionar ao carrinho"
+              onPress={() => addToCart(item)}
+            />
+          )}
         </View>
       )}
     />

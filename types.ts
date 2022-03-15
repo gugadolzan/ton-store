@@ -4,3 +4,9 @@ export interface IProduct {
   price: number;
   thumbnail: string;
 }
+
+export interface IProductsListProps {
+  products: IProduct[];
+  shoppingCart: IProduct[];
+  setShoppingCart: (shoppingCart: IProduct[]) => void;
+}
