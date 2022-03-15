@@ -1,9 +1,12 @@
 import { createContext } from 'react';
 
-import { IShoppingCartContext } from '../types';
+import { IProduct, IShoppingCartContext } from '../types';
 
 const defaultContext = {
   shoppingCart: [],
+  setShoppingCart: (products: IProduct[]) => {
+    console.log(products);
+  },
 };
 
 const ShoppingCartContext = createContext<IShoppingCartContext>(defaultContext);
