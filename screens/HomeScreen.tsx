@@ -8,7 +8,6 @@ import { IProduct } from '../types';
 export default function HomeScreen() {
   const [isLoading, setLoading] = useState(true);
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [shoppingCart, setShoppingCart] = useState<IProduct[]>([]);
 
   const getProducts = async () => {
     try {
@@ -31,15 +30,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      {isLoading ? (
-        <ActivityIndicator />
-      ) : (
-        <ProductsList
-          products={products}
-          shoppingCart={shoppingCart}
-          setShoppingCart={setShoppingCart}
-        />
-      )}
+      {isLoading ? <ActivityIndicator /> : <ProductsList products={products} />}
     </View>
   );
 }

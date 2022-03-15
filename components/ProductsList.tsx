@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FlatList, Image, Pressable, Text, View } from 'react-native';
+import ShoppingCartContext from '../context/ShoppingCartContext';
 
 import styles from '../styles';
 import { IProduct, IProductsListProps } from '../types';
 
-export default function ProductsList({
-  products,
-  shoppingCart,
-  setShoppingCart,
-}: IProductsListProps) {
-  const addToCart = (product: IProduct) => {
+export default function ProductsList({ products }: IProductsListProps) {
+  const { shoppingCart, setShoppingCart } = useContext(ShoppingCartContext);
+
+  const addToCart = (product: IProduct) => {    
     setShoppingCart([...shoppingCart, product]);
   };
 
