@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 
-import { IProduct } from '../types';
 import ProductsList from '../components/ProductsList';
+import styles from '../styles';
+import { IProduct } from '../types';
 
 export default function HomeScreen() {
   const [isLoading, setLoading] = useState(true);
@@ -33,12 +34,3 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    flex: 1,
-    justifyContent: 'center',
-  },
-});

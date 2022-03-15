@@ -1,6 +1,7 @@
 import React from 'react';
-import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Image, Text, View } from 'react-native';
 
+import styles from '../styles';
 import { IProduct } from '../types';
 
 export default function ProductsList({ products }: { products: IProduct[] }) {
@@ -19,15 +20,3 @@ export default function ProductsList({ products }: { products: IProduct[] }) {
     />
   );
 }
-
-const styles = StyleSheet.create({
-  logo: {
-    height: 100,
-    width: 100,
-  },
-  product: {
-    borderBottomColor: '#eee',
-    borderBottomWidth: 1,
-    margin: 10,
-  },
-});
