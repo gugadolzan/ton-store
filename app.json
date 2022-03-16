@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "online-store",
-    "slug": "online-store",
+    "name": "ton-store",
+    "slug": "ton-store",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
