@@ -8,7 +8,7 @@ import { IProduct, IProductsListProps } from '../types';
 export default function ProductsList({ products }: IProductsListProps) {
   const { shoppingCart, setShoppingCart } = useContext(ShoppingCartContext);
 
-  const addToCart = (product: IProduct) => {    
+  const addToCart = (product: IProduct) => {
     setShoppingCart([...shoppingCart, product]);
   };
 

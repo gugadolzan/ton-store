@@ -11,12 +11,10 @@ export default function HomeScreen() {
 
   const getProducts = async () => {
     try {
-      const query = 'maquininha';
-      const response = await fetch(
-        `https://api.mercadolibre.com/sites/MLB/search?q=${query}`
-      );
-      const { results } = await response.json();
-      setProducts(results.slice(0, 12));
+      // Personal API created by me
+      const response = await fetch('https://ton-api-1211.herokuapp.com/');
+      const products = await response.json();
+      setProducts(products);
     } catch (error) {
       console.error(error);
     } finally {
