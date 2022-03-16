@@ -5,46 +5,58 @@ import ShoppingCartContext from '../context/ShoppingCartContext';
 import styles from '../styles';
 
 export default function ShoppingCartScreen() {
-  const { addToCart, removeFromCart, shoppingCart } = useContext(ShoppingCartContext);
+  const { addToCart, removeFromCart, shoppingCart } =
+    useContext(ShoppingCartContext);
 
   if (shoppingCart.length === 0) {
     return (
       <View style={styles.container}>
-        <Text>Nenhum produto no carrinho!</Text>
+        <Text style={styles.noProductsInCart}>Nenhum produto no carrinho!</Text>
       </View>
     );
   }
 
   return (
     <View>
-      <Text>{shoppingCart.length} produtos adicionados:</Text>
+      <Text style={styles.productsInCart}>
+        {shoppingCart.length} produtos adicionados:
+      </Text>
       <FlatList
         data={shoppingCart}
         keyExtractor={({ product: { id } }) => id}
         renderItem={({ item }) => (
-          <View style={styles.product}>
-            <Text>
-              {item.product.title}, {item.product.price}
-            </Text>
-            <Image style={styles.logo} source={{ uri: item.product.thumbnail }} />
-            <View>
+          <View style={styles.productContainer}>
+            <View style={styles.productInfo}>
+              <Image
+                style={styles.productImage}
+                source={{ uri: item.product.thumbnail }}
+              />
+              <View>
+                <Text style={styles.productTitle}>{item.product.title}</Text>
+                <Text style={styles.productPrice}>
+                  R$ {item.product.price.toFixed(2).replace('.', ',')}
+                </Text>
+              </View>
+            </View>
+            <View style={styles.buttonsContainer}>
               <Pressable
-                style={styles.buttonAdd}
+                style={styles.buttonPlus}
                 onPress={() => addToCart(item.product)}
               >
-                <Text style={styles.buttonText}>+</Text>
+                <Text style={styles.buttonSign}>+</Text>
               </Pressable>
-              <Text>
+              <Text style={styles.quantity}>
                 {
-                  shoppingCart.find(({ product }) => product.id === item.product.id)
-                    ?.quantity
+                  shoppingCart.find(
+                    ({ product }) => product.id === item.product.id
+                  )?.quantity
                 }
               </Text>
               <Pressable
-                style={styles.buttonRemove}
+                style={styles.buttonMinus}
                 onPress={() => removeFromCart(item.product)}
               >
-                <Text style={styles.buttonText}>-</Text>
+                <Text style={styles.buttonSign}>-</Text>
               </Pressable>
             </View>
           </View>
