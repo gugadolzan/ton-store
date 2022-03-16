@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { FlatList, Image, Pressable, Text, View } from 'react-native';
 
-import styles from '../styles';
 import ShoppingCartContext from '../context/ShoppingCartContext';
+import styles from '../styles';
 import { IProduct } from '../types';
 
 export default function ShoppingCartScreen() {
