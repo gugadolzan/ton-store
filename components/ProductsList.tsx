@@ -13,36 +13,47 @@ export default function ProductsList({ products }: IProductsListProps) {
     <FlatList
       data={products}
       keyExtractor={({ id }) => id}
+      style={styles.productsList}
       renderItem={({ item }) => (
-        <View style={styles.product}>
-          <Text>
-            {item.title}, {item.price}
-          </Text>
-          <Image style={styles.logo} source={{ uri: item.thumbnail }} />
-
+        <View style={styles.productContainer}>
+          <View style={styles.productInfo}>
+            <Image
+              style={styles.productImage}
+              source={{ uri: item.thumbnail }}
+            />
+            <View>
+              <Text style={styles.productTitle}>{item.title}</Text>
+              <Text style={styles.productPrice}>
+                R$ {item.price.toFixed(2).replace('.', ',')}
+              </Text>
+            </View>
+          </View>
           {!shoppingCart.find(({ product }) => product.id === item.id) ? (
-            <Pressable style={styles.buttonAdd} onPress={() => addToCart(item)}>
+            <Pressable
+              style={styles.buttonAddToCart}
+              onPress={() => addToCart(item)}
+            >
               <Text style={styles.buttonText}>Adicionar ao carrinho</Text>
             </Pressable>
           ) : (
-            <View>
+            <View style={styles.buttonsContainer}>
               <Pressable
-                style={styles.buttonAdd}
+                style={styles.buttonPlus}
                 onPress={() => addToCart(item)}
               >
-                <Text style={styles.buttonText}>+</Text>
+                <Text style={styles.buttonSign}>+</Text>
               </Pressable>
-              <Text>
+              <Text style={styles.quantity}>
                 {
                   shoppingCart.find(({ product }) => product.id === item.id)
                     ?.quantity
                 }
               </Text>
               <Pressable
-                style={styles.buttonRemove}
+                style={styles.buttonMinus}
                 onPress={() => removeFromCart(item)}
               >
-                <Text style={styles.buttonText}>-</Text>
+                <Text style={styles.buttonSign}>-</Text>
               </Pressable>
             </View>
           )}
