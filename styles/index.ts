@@ -96,4 +96,12 @@ export default StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
+  totalInCart: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    margin: 10,
+  },
+  totalInCartValue: {
+    color: '#00ad0c',
+  },
 });

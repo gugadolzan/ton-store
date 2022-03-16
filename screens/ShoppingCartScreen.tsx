@@ -16,10 +16,19 @@ export default function ShoppingCartScreen() {
     );
   }
 
+  const totalInCart = shoppingCart.reduce(
+    (acc, item) => acc + item.product.price * item.quantity,
+    0
+  );
+
   return (
-    <View>
+    <View style={styles.productsList}>
       <Text style={styles.productsInCart}>
-        {shoppingCart.length} produtos adicionados:
+        {shoppingCart.length} produto(s) adicionado(s) ao carrinho
+      </Text>
+      <Text style={styles.totalInCart}>
+        {'Total: '}
+        <Text style={styles.totalInCartValue}>R$ {totalInCart.toFixed(2)}</Text>
       </Text>
       <FlatList
         data={shoppingCart}
