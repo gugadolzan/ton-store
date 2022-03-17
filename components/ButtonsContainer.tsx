@@ -10,13 +10,21 @@ export default function ButtonsContainer({ product }: IProductProps) {
 
   return (
     <View style={styles.buttonsContainer}>
-      <Pressable style={styles.buttonPlus} onPress={() => addToCart(product)}>
+      <Pressable
+        style={styles.buttonPlus}
+        onPress={() => addToCart(product)}
+        testID="plus-button"
+      >
         <Text style={styles.buttonSign}>+</Text>
       </Pressable>
-      <Text style={styles.quantity}>
+      <Text style={styles.quantity} testID="quantity">
         {shoppingCart.find((item) => item.product.id === product.id)?.quantity}
       </Text>
-      <Pressable style={styles.buttonMinus} onPress={() => removeFromCart(product)}>
+      <Pressable
+        style={styles.buttonMinus}
+        onPress={() => removeFromCart(product)}
+        testID="minus-button"
+      >
         <Text style={styles.buttonSign}>-</Text>
       </Pressable>
     </View>
