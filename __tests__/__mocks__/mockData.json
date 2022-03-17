@@ -1,0 +1,130 @@
+[
+  {
+    "id": "t1",
+    "title": "Maquininha T1",
+    "price": 94.8,
+    "thumbnail": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/frontview/t1.png",
+    "thumbnailAlt": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/sideview/t1.png",
+    "details": [
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/calendar.png",
+        "text": "Receba suas vendas em 1 dia útil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/shipping.png",
+        "text": "Frete grátis para todo o Brasil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/cellphone.png",
+        "text": "Precisa de celular com bluetooth e conectado"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/sms.png",
+        "text": "Comprovante via aplicativo e SMS"
+      }
+    ]
+  },
+  {
+    "id": "t1-chip",
+    "title": "Maquininha T1 Chip",
+    "price": 178.8,
+    "thumbnail": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/frontview/t1-chip.png",
+    "thumbnailAlt": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/sideview/t1-chip.png",
+    "details": [
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/calendar.png",
+        "text": "Receba suas vendas em 1 dia útil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/shipping.png",
+        "text": "Frete grátis para todo o Brasil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/no-cellphone.png",
+        "text": "Não precisa de um celular"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/sms.png",
+        "text": "Comprovante via aplicativo e SMS"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/wi-fi.png",
+        "text": "Conexão Wi-Fi e chip de dados"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/nfc.png",
+        "text": "Pagamento por aproximação (NFC)"
+      }
+    ]
+  },
+  {
+    "id": "t2",
+    "title": "Maquininha T2+",
+    "price": 166.8,
+    "thumbnail": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/frontview/t2.png",
+    "thumbnailAlt": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/sideview/t2.png",
+    "details": [
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/calendar.png",
+        "text": "Receba suas vendas em 1 dia útil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/shipping.png",
+        "text": "Frete grátis para todo o Brasil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/no-cellphone.png",
+        "text": "Não precisa de um celular"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/sms.png",
+        "text": "Comprovante via aplicativo ou SMS"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/wi-fi.png",
+        "text": "Conexão Wi-Fi e chip de dados"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/nfc.png",
+        "text": "Pagamento por aproximação (NFC)"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/battery.png",
+        "text": "Bateria de longa duração (+ de 12h)"
+      }
+    ]
+  },
+  {
+    "id": "t3",
+    "title": "Maquininha T3",
+    "price": 358.8,
+    "thumbnail": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/frontview/t3.png",
+    "thumbnailAlt": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/sideview/t3.png",
+    "details": [
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/calendar.png",
+        "text": "Receba suas vendas em 1 dia útil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/shipping.png",
+        "text": "Frete grátis para todo o Brasil"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/no-cellphone.png",
+        "text": "Não precisa de um celular"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/receipt.png",
+        "text": "Comprovante impresso, via aplicativo ou SMS"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/wi-fi.png",
+        "text": "Conexão Wi-Fi e chip de dados"
+      },
+      {
+        "icon": "https://raw.githubusercontent.com/gugadolzan/ton-api/main/assets/icons/nfc.png",
+        "text": "Pagamento por aproximação (NFC)"
+      }
+    ]
+  }
+]
