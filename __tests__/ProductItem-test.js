@@ -37,7 +37,7 @@ describe('Test ProductItem', () => {
   it('should render price formatted', () => {
     const price = tree.root.findByProps({ testID: 'product-price' })
       .props.children;
-    expect(price.join('')).toBe('R$ 94,80');
+    expect(price.slice(3)).toBe('94,80');
   });
 
   it('should render add to cart button', () => {
