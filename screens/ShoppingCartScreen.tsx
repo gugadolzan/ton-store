@@ -4,6 +4,7 @@ import { FlatList, Text, View } from 'react-native';
 import ProductItem from '../components/ProductItem';
 import ShoppingCartContext from '../context/ShoppingCartContext';
 import styles from '../styles';
+import currency from '../utils/currencyFormatter';
 
 export default function ShoppingCartScreen() {
   const { shoppingCart } = useContext(ShoppingCartContext);
@@ -31,7 +32,9 @@ export default function ShoppingCartScreen() {
       </Text>
       <Text style={styles.totalInCart}>
         {'Total: '}
-        <Text style={styles.totalInCartValue}>R$ {totalInCart.toFixed(2)}</Text>
+        <Text style={styles.totalInCartValue}>
+          {currency.format(totalInCart)}
+        </Text>
       </Text>
       <FlatList
         data={shoppingCart}

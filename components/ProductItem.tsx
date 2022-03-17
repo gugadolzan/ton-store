@@ -5,6 +5,7 @@ import ButtonsContainer from './ButtonsContainer';
 import ShoppingCartContext from '../context/ShoppingCartContext';
 import styles from '../styles';
 import { IProductProps } from '../types';
+import currency from '../utils/currencyFormatter';
 
 export default function ProductItem({ product }: IProductProps) {
   const { addToCart, shoppingCart } = useContext(ShoppingCartContext);
@@ -18,9 +19,11 @@ export default function ProductItem({ product }: IProductProps) {
           testID="product-image"
         />
         <View>
-          <Text style={styles.productTitle} testID="product-title">{product.title}</Text>
+          <Text style={styles.productTitle} testID="product-title">
+            {product.title}
+          </Text>
           <Text style={styles.productPrice} testID="product-price">
-            R$ {product.price.toFixed(2).replace('.', ',')}
+            {currency.format(product.price)}
           </Text>
         </View>
       </View>
