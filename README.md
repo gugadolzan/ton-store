@@ -4,7 +4,7 @@
 
 # Projeto Loja do Ton
 
-![app](https://user-images.githubusercontent.com/85767695/158708237-f1081952-72ca-48e8-b0d1-bd8cc939840b.gif)
+![app](https://user-images.githubusercontent.com/85767695/158719027-755819d2-1b87-4855-9518-93f3f4d48e60.gif)
 
 ## Contexto
 
