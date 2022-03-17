@@ -34,10 +34,16 @@ npm install
 > :warning: Você precisar ter o Expo CLI instalado em sua máquina.
 > Caso não tenha, execute o comando `npm install -g expo-cli` no seu terminal.
 
-1. Execute o comando:
-
 ```bash
 npm start
+```
+
+## Executando os testes
+
+> :warning: WIP
+
+```bash
+npm test
 ```
 
 ## Contato
