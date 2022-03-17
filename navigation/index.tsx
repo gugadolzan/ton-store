@@ -23,7 +23,7 @@ export default function Navigation() {
           name="Home"
           component={HomeScreen}
           options={({ navigation }) => ({
-            title: 'Boas-vindas à Loja Online',
+            title: 'Loja do Ton',
             headerRight: () => (
               <Pressable
                 onPress={() => navigation.navigate('ShoppingCart')}
