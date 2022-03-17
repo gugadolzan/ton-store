@@ -1,12 +1,11 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
+import mockData from './__mocks__/mockData.json';
 import ButtonsContainer from '../components/ButtonsContainer';
 import ShoppingCartContext from '../context/ShoppingCartContext';
 
-import mockData from './__mocks__/mockData.json';
-
-describe('ButtonsContainer', () => {
+describe('Test ButtonsContainer', () => {
   const tree = create(
     <ShoppingCartContext.Provider
       value={{

@@ -15,16 +15,21 @@ export default function ProductItem({ product }: IProductProps) {
         <Image
           style={styles.productImage}
           source={{ uri: product.thumbnail }}
+          testID="product-image"
         />
         <View>
-          <Text style={styles.productTitle}>{product.title}</Text>
-          <Text style={styles.productPrice}>
+          <Text style={styles.productTitle} testID="product-title">{product.title}</Text>
+          <Text style={styles.productPrice} testID="product-price">
             R$ {product.price.toFixed(2).replace('.', ',')}
           </Text>
         </View>
       </View>
       {!shoppingCart.find((item) => item.product.id === product.id) ? (
-        <Pressable style={styles.buttonAddToCart} onPress={() => addToCart(product)}>
+        <Pressable
+          style={styles.buttonAddToCart}
+          onPress={() => addToCart(product)}
+          testID="add-to-cart"
+        >
           <Text style={styles.buttonText}>Adicionar ao carrinho</Text>
         </Pressable>
       ) : (
