@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import ShoppingCartContext from '../context/ShoppingCartContext';
 
+import ShoppingCartContext from '../context/ShoppingCartContext';
 import styles from '../styles';
 import { IProductProps } from '../types';
 

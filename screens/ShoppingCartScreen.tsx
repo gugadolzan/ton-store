@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { FlatList, Text, View } from 'react-native';
-import ProductItem from '../components/ProductItem';
 
+import ProductItem from '../components/ProductItem';
 import ShoppingCartContext from '../context/ShoppingCartContext';
 import styles from '../styles';
 

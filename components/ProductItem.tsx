@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Image, Pressable, Text, View } from 'react-native';
 
+import ButtonsContainer from './ButtonsContainer';
 import ShoppingCartContext from '../context/ShoppingCartContext';
 import styles from '../styles';
 import { IProductProps } from '../types';
-import ButtonsContainer from './ButtonsContainer';
 
 export default function ProductItem({ product }: IProductProps) {
   const { addToCart, shoppingCart } = useContext(ShoppingCartContext);

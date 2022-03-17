@@ -1,9 +1,9 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 
+import ProductItem from './ProductItem';
 import styles from '../styles';
 import { IProductsArrayProps } from '../types';
-import ProductItem from './ProductItem';
 
 export default function ProductsList({ products }: IProductsArrayProps) {
   return (
