@@ -5,6 +5,10 @@ export interface IProduct {
   thumbnail: string;
 }
 
+export interface IProductItemProps {
+  product: IProduct;
+}
+
 export interface IProductsListProps {
   products: IProduct[];
 }
