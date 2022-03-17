@@ -12,7 +12,9 @@ export default function ShoppingCartScreen() {
   if (shoppingCart.length === 0) {
     return (
       <View style={styles.container}>
-        <Text style={styles.noProductsInCart}>Nenhum produto no carrinho!</Text>
+        <Text style={styles.noProductsInCart} testID="no-products-in-cart">
+          Nenhum produto no carrinho!
+        </Text>
       </View>
     );
   }
@@ -27,12 +29,12 @@ export default function ShoppingCartScreen() {
 
   return (
     <View style={styles.productsList}>
-      <Text style={styles.productsInCart}>
+      <Text style={styles.productsInCart} testID="products-in-cart">
         {shoppingCart.length} produto(s) adicionado(s) ao carrinho
       </Text>
       <Text style={styles.totalInCart}>
         {'Total: '}
-        <Text style={styles.totalInCartValue}>
+        <Text style={styles.totalInCartValue} testID="total-in-cart">
           {currency.format(totalInCart)}
         </Text>
       </Text>
