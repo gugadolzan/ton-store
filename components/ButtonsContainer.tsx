@@ -3,9 +3,9 @@ import { Pressable, Text, View } from 'react-native';
 import ShoppingCartContext from '../context/ShoppingCartContext';
 
 import styles from '../styles';
-import { IProductItemProps } from '../types';
+import { IProductProps } from '../types';
 
-export default function ButtonsContainer({ product }: IProductItemProps) {
+export default function ButtonsContainer({ product }: IProductProps) {
   const { addToCart, removeFromCart, shoppingCart } =
     useContext(ShoppingCartContext);
 

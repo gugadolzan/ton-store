@@ -2,10 +2,10 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import styles from '../styles';
-import { IProductsListProps } from '../types';
+import { IProductsArrayProps } from '../types';
 import ProductItem from './ProductItem';
 
-export default function ProductsList({ products }: IProductsListProps) {
+export default function ProductsList({ products }: IProductsArrayProps) {
   return (
     <FlatList
       data={products}

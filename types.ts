@@ -5,11 +5,11 @@ export interface IProduct {
   thumbnail: string;
 }
 
-export interface IProductItemProps {
+export interface IProductProps {
   product: IProduct;
 }
 
-export interface IProductsListProps {
+export interface IProductsArrayProps {
   products: IProduct[];
 }
 
