@@ -6,8 +6,7 @@ import styles from '../styles';
 import { IProductProps } from '../types';
 
 export default function ButtonsContainer({ product }: IProductProps) {
-  const { addToCart, removeFromCart, shoppingCart } =
-    useContext(ShoppingCartContext);
+  const { addToCart, removeFromCart, shoppingCart } = useContext(ShoppingCartContext);
 
   return (
     <View style={styles.buttonsContainer}>
@@ -17,10 +16,7 @@ export default function ButtonsContainer({ product }: IProductProps) {
       <Text style={styles.quantity}>
         {shoppingCart.find((item) => item.product.id === product.id)?.quantity}
       </Text>
-      <Pressable
-        style={styles.buttonMinus}
-        onPress={() => removeFromCart(product)}
-      >
+      <Pressable style={styles.buttonMinus} onPress={() => removeFromCart(product)}>
         <Text style={styles.buttonSign}>-</Text>
       </Pressable>
     </View>

@@ -24,10 +24,7 @@ export default function ProductItem({ product }: IProductProps) {
         </View>
       </View>
       {!shoppingCart.find((item) => item.product.id === product.id) ? (
-        <Pressable
-          style={styles.buttonAddToCart}
-          onPress={() => addToCart(product)}
-        >
+        <Pressable style={styles.buttonAddToCart} onPress={() => addToCart(product)}>
           <Text style={styles.buttonText}>Adicionar ao carrinho</Text>
         </Pressable>
       ) : (
