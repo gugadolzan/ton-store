@@ -16,6 +16,9 @@ export default function ShoppingCartScreen() {
     );
   }
 
+  /**
+   * Calculates the total price of the shopping cart
+   */
   const totalInCart = shoppingCart.reduce(
     (acc, item) => acc + item.product.price * item.quantity,
     0

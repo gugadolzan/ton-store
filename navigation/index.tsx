@@ -14,13 +14,9 @@ export default function Navigation() {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
-          headerStyle: {
-            backgroundColor: '#00ad0c',
-          },
+          headerStyle: { backgroundColor: '#00ad0c' },
           headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
+          headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
         <Stack.Screen
@@ -31,14 +27,10 @@ export default function Navigation() {
             headerRight: () => (
               <Pressable
                 onPress={() => navigation.navigate('ShoppingCart')}
-                style={({ pressed }) => ({
-                  opacity: pressed ? 0.5 : 1,
-                })}
+                style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
               >
                 <Image
-                  source={{
-                    uri: 'https://img.icons8.com/ios-filled/50/FFFFFF/shopping-cart.png',
-                  }}
+                  source={{ uri: 'https://img.icons8.com/ios-filled/50/FFFFFF/shopping-cart.png' }}
                   style={{ width: 30, height: 30 }}
                 />
               </Pressable>
